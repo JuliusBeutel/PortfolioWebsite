@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=ed">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <title>Julius Beutel</title>
+    <link rel = "stylesheet" href = "styles/home.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/2cf1a5ff5b.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu"  data-aos="slide-down" data-aos-duration="2000">
+                    <li><i class="fa-regular fa-xmark" onclick="closeMenu()"></i></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                </ul>
+                <i id="burger" class="fa-regular fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000">
+                <h1>Hi, I'm <span class="typing"></span> </h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------about---------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <img src="images/Homepage/Foto2.jpg">
+                </div>
+                <div class="about-col2" data-aos="fade" data-aos-duration="2000" data-aos-delay="1000">
+                    <h2 class="sub-title">About Me</h2>
+                    <p>
+                        Hi, I'm Julius Beutel, 20 years old and studying Mobile Media at the "Hochschule der Medien" in Stuttgart. 
+                        I'm a passionate developer and designer who loves to create new things, especially 
+                        in the field of websites and mobile applications.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing interactive App interfaces</li>
+                            <li><span>Web Development</span><br>Develop Websites like this one </li>
+                            <li><span>App Development</span><br>Building Android, iOS or Web Applications</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>10/2022</span><br>4-week vacation job in the PT/SSB area at Daimler AG in Mettingen</li>
+                            <li><span>2011 - 2022</span><br>Part-time job as a delivery boy for the Esslingen weekly newspaper</li>
+                            <li><span>04/2019</span><br>BOGY internship at the District Office in Esslingen in the areas of <br> 
+                                                        "guardianship, custody and guardianship" and "economic youth welfare".</li>
+                            <li><span>02/2018</span><br>Social internship in the kindergarten St. Josef in Esslingen</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>10/2021 - current</span><br>Study of Mobile Media at the Stuttgart Media University</li>
+                            <li><span>09/2013 - 07/2021</span><br>Attendance of "Schelztor-Gymnasium Esslingen"<br>
+                                                                    School-leaving qualification: General qualification for university entrance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cv-btn" data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+                    <a href="images/Homepage/CV Julius Beutel.pdf" download class="btn">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------portfolio---------------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h2 class="sub-title" data-aos="fade" data-aos-duration="2000">My Work</h2>
+                <div class="work-list">
+                    <div class="work" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
+                        <img src="images/Homepage/uid-logo.png">
+                        <div class="layer">
+                            <h3>User Interface Design</h3>
+                            <p>A high-fidelity prototype of the application "SustainAppility" which helps you to get information about the sustainabilty of a product by scanning its barcode </p>
+                            <a href="sustainAppility.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="work" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+                        <img src="images/Homepage/habit-tracker.png">
+                        <div class="layer">
+                            <h3>Software Engineering</h3>
+                            <p>Habit-Tracker is a software that helps you to track your habits and write a daily journal</p>
+                            <a href="habit-tracker.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="work" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000">
+                        <img src="images/Homepage/alpacohol-logo.png">
+                        <div class="layer">
+                            <h3>Android Application Development</h3>
+                            <p>Alpacohol is an Android application that helps you to keep track of your alcohol consumption.</p>
+                            <a href="alpacohol.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- -----------contact---------------- -->
+    <div id="contact"></div>
+        <div class="container">
+            <div class="row">     
+                <div class="contact-left">
+                    <h2 class="sub-title" data-aos="fade" data-aos-duration="2000">Contact Me!</h2>
+                    <form id="myForm">
+                        <input name="Name" type="text" id="inputName" placeholder="Your Name ..." data-aos="fade-right" required >
+                        <input name="Email" type="email" id="inputEmail" placeholder="Your Email ..." data-aos="fade-right" data-aos-delay="200" required>
+                        <textarea name="Message" id="inputMsg" rows=6 placeholder="Your Message ..." data-aos="fade-right" data-aos-delay="400" required></textarea>
+                       <!-- <div class="g-recaptcha" data-sitekey="6Ldbm_kkAAAAAAUxg4HcjFMQEEM5Si-IcdYv95s0"></div> -->
+                    </form> 
+                    <button class="btn" type="submit" onclick= 'checkUserInput()' data-aos="fade" data-aos-duration="1000" data-aos-delay="200" ><i class="fa-solid fa-paper-plane"></i></button>
+                </div>              
+                <div class="contact-right">
+                    <div class="wrapper" style="display: none;"> 
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> 
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> 
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                    <p data-aos="fade" data-aos-duration="2000" data-aos-delay="1000">Thanks for your message!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- -----------footer---------------- -->
+    <hr width="80%">
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-left">
+                    <p> &copy;2023 Julius Beutel</p>
+                </div>                  
+                <div class="footer-right">
+                    <div class="social-icons">
+                        <a href="https://github.com/JuliusBeutel"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="mailto:beutel.julius@gmx.de"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!-- -----------java script---------------- -->
+
+
+        <!-- -----------icons---------------- -->
+            
+        <script src="https://kit.fontawesome.com/2cf1a5ff5b.js" crossorigin="anonymous"></script>
+
+        <!-- -----------typed.js---------------- -->
+    
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="/script/typed.js"></script>
+    
+        <!-- -----------tab manager---------------- -->
+    
+        <script src="/script/tab_manager.js"></script>
+    
+        <!-- -----------burger menu---------------- -->
+    
+        <script src="/script/burger_menu.js"></script>
+    
+        <!-- -----------form---------------- -->
+    
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
+        </script>
+    
+        <script src="/script/form.js"></script>
+    
+        <!-- -----------reCaptcha---------------- -->
+    
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+        <!-- -----------aos---------------- -->
+        
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+
+            if(window.innerWidth < 700) {
+                const elements = document.querySelectorAll('[data-aos-delay]');
+                for (let i = 0; i < elements.length; i++) {
+                elements[i].removeAttribute('data-aos');
+                }
+            }
+        </script>
+</body>
+
+
+</html>

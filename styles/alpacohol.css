@@ -1,0 +1,50 @@
+/* -------- responsive media queries -------- */
+
+@media only screen and (max-width: 700px) {
+
+    .header-text {
+        font-size: 30px;
+    }
+
+    .row  {
+        flex-direction: column;
+    }
+  
+    .leftcolumn-text, .rightcolumn-img, .leftcolumn-img, .rightcolumn-text {
+        flex-basis: 100%;
+        margin-top: 20px;
+    }
+
+    .leftcolumn-text, .leftcolumn-img img{
+        margin-top: 80px;
+    }
+
+    .leftcolumn-text p, .rightcolumn-text p{
+        width: 117%;
+    }
+
+    .rightcolumn-text p{
+        margin-left: -17%;
+    }
+  
+    .leftcolumn-img, .rightcolumn-img {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .leftcolumn-img img, .rightcolumn-img img {
+        width: 56%;
+        margin-left: 22%;
+        margin-right: 22%;
+    }
+
+    .footer-left p{
+        font-size: 12px;
+    }
+
+    #footer .row  {
+        flex-direction: row;
+    }
+}
+
+
