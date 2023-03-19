@@ -4,10 +4,6 @@ function checkUserInput(){
     const inputEmail = document.getElementById("inputEmail");
     const emailRegex = /\S+@\S+\.\S+/;;
 
-    console.log(inputs)
-    
-    
-
     let allFieldsValid = true;
     inputs.forEach(input => {
         if  (input.value === "") {
@@ -23,6 +19,7 @@ function checkUserInput(){
             inputEmail.classList.remove('invalid');            
         }
     });
+    
     if(allFieldsValid === true){
         SubForm(form);
     }
@@ -30,21 +27,28 @@ function checkUserInput(){
 
 function SubForm (form){
 
-    $.ajax({
-        url:"https://api.apispreadsheets.com/data/WaoPNiu7H6gthGVt/",
-        type:"post",
-        data:$("#myForm").serializeArray(),
-        success: function(){
-            showCheckmark();
-            setTimeout(function(){
-                hideCheckmark();
-            }, 5000);
-            form.reset();
-        },
-        error: function(){
-            alert("There was an error :(")
-        }
-    });
+    const recaptcha = document.getElementById("g-recaptcha-response").value;
+
+    if(recaptcha !== ""){
+        $.ajax({
+            url:"https://api.apispreadsheets.com/data/WaoPNiu7H6gthGVt/",
+            type:"post",
+            data:$("#myForm").serializeArray(),
+            success: function(){
+                showCheckmark();
+                setTimeout(function(){
+                    hideCheckmark();
+                }, 5000);
+                form.reset();
+                recaptcha.reset();
+            },
+            error: function(){
+                alert("There was an error :(")
+            }
+        });
+} else {
+    alert("Please check the recaptcha");
+}
 }
 
 function showCheckmark(){
