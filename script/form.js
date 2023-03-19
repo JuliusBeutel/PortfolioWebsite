@@ -27,29 +27,24 @@ function checkUserInput(){
 
 function SubForm (form){
 
-    const recaptcha = document.getElementById("g-recaptcha-response").value;
 
-    if(recaptcha !== ""){
-        $.ajax({
-            url:"https://api.apispreadsheets.com/data/WaoPNiu7H6gthGVt/",
-            type:"post",
-            data:$("#myForm").serializeArray(),
-            success: function(){
-                showCheckmark();
-                setTimeout(function(){
-                    hideCheckmark();
+    $.ajax({
+        url:"https://api.apispreadsheets.com/data/WaoPNiu7H6gthGVt/",
+        type:"post",
+        data:$("#myForm").serializeArray(),
+        success: function(){
+                    showCheckmark();
+                    setTimeout(function(){
+                        hideCheckmark();
                 }, 5000);
                 form.reset();
                 recaptcha.reset();
             },
-            error: function(){
+        error: function(){
                 alert("There was an error :(")
             }
         });
-} else {
-    alert("Please check the recaptcha");
-}
-}
+} 
 
 function showCheckmark(){
     document.querySelector(".wrapper").style.display = "flex";
