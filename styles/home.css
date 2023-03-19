@@ -167,6 +167,7 @@ nav ul li a:hover::after {
     color: #393E4D;
     font-size: 14px;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .tab-contents{
